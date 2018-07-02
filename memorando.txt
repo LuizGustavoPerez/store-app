@@ -1,0 +1,15 @@
+#Utilizei a versão 6 do Angular com Angular CLI.
+
+#Instalei o Bootstrap 4.1.1 para reaproveitar classes estruturais como container, row, etc...
+
+#Configurei através do Angular CLI a utilização padrão do less e o utilizei nos componentes para customização.
+
+#Separei os componentes de 'Client', 'Book' e 'Search' para facilitar na manutenção e possível reaproveitamento.
+
+#Componente 'Search' inclusive reutilizei nos componentes 'Client' e 'Book'.
+
+#Para o serviço de busca de clientes e livros, criei um service dentro do componente de busca para realização das buscas aos end-points passados.
+
+#Criei as interfaces para 'Client' e 'Book' para seguir as boas práticas e facilitar no entendimento do objeto recebido pelos end-points
+
+#Criei um menu de navegação para separar as duas visões e criei um módulo de rotas para controlar o uso e carregamento dos componentes.
