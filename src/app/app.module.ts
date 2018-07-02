@@ -2,6 +2,7 @@ import { SearchComponent } from './searchs/search/search.component';
 import { BooksComponent } from './searchs/books/books.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -18,9 +19,11 @@ import { ClientsComponent } from './searchs/clients/clients.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  exports: [],
+  providers: [ SearchComponent ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

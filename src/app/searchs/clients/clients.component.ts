@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Iclients } from './iclients';
+
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsComponent implements OnInit {
 
+  client: Iclients;
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  receiveClient(clientEvent: Iclients) {
+    this.client = clientEvent;
+    console.log(this.client);
+    if (Object.keys(this.client).length === 0 || this.client == null){
+      console.log("vazio");
+    }
+  }
 }
