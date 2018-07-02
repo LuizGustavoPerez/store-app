@@ -1,0 +1,18 @@
+@navColor: rgba(172, 38, 132, 0.932);   //defined color to navbar
+@navTextColor: #fff;                    //defined color to text of navBar 
+@navTextColorHover: black;              //defined color to text of navBar on mouseouver.
+
+.navbar{
+    background-color: @navColor;
+    span{
+        color: @navTextColor;
+        cursor: context-menu;
+    }
+    a{
+        color: @navTextColor;
+        cursor: pointer;
+        &:hover{
+            color: @navTextColorHover;
+        }
+    }
+}
