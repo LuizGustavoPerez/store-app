@@ -1,4 +1,4 @@
 <div class="row">
-  <input class="input-group-text" type="text" placeholder="Digite sua busca aqui">
-  <button class="btn btn-primary" value="Pesquisar">Pesquisar</button>
+  <input class="input-group-text" type="text" placeholder="Digite sua busca aqui" #inputSearch required>
+  <button class="btn btn-primary" value="Pesquisar" (click)="getResult(inputSearch.value)">Pesquisar</button>
 </div>

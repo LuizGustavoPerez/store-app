@@ -17,6 +17,9 @@ export class SearchService {
     return this.http.get(this.clientUrl + name);
   }
 
+  getBook(name){
+    return this.http.get(this.bookUrl + name);
+  }
   
 
 }

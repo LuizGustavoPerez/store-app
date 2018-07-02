@@ -1,3 +1,18 @@
-<p>
-  clients works!
-</p>
+<app-search (clientEvent)="receiveClient($event)"></app-search>
+
+<div class="clients" *ngIf="hasResult">
+    <div class="card" *ngFor="let c of client">
+        <div class="card-body">
+            <p class="card-text"><b>ID:</b> {{ c.id }}</p>
+            <p class="card-text"><b>Full Name:</b> {{ c.fullName }}</p>
+            <p class="card-text"><b>Gender:</b> {{ c.gender }}</p>
+            <p class="card-text"><b>Age:</b> {{ c.age }}</p>
+            <p class="card-text"><b>Email:</b> {{ c.email }}</p>
+            <p class="card-text"><b>Phone:</b> {{ c.phone }}</p>
+            <p class="card-text"><b>Username:</b> {{ c.username }}</p>
+        </div>
+    </div>
+</div>
+<div *ngIf="!hasResult && searched">
+    <p>Nenhum resultado encontrado! Por favor altere sua busca.</p>
+</div>

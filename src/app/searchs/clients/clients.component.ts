@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Iclients } from './iclients';
+
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsComponent implements OnInit {
 
+  client: Iclients;
+  hasResult: boolean;
+  searched: boolean = false;
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  receiveClient(clientEvent: Iclients) {
+    this.client = clientEvent;
+    this.searched = true;
+    if (Object.keys(this.client).length === 0 || this.client == null){
+      this.hasResult = false;
+    }else{
+      this.hasResult = true;
+    }
+  }
 }

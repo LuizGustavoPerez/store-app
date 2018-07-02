@@ -1,3 +1,17 @@
-<p>
-  books works!
-</p>
+<app-search (bookEvent)="receiveBook($event)"></app-search>
+
+<div class="books" *ngIf="hasResult">
+    <div class="card" *ngFor="let b of book">
+        <div class="card-body">
+            <p class="card-text"><b>ID:</b> {{ b.id }}</p>
+            <p class="card-text"><b>Full Name:</b> {{ b.title }}</p>
+            <p class="card-text"><b>Gender:</b> {{ b.author }}</p>
+            <p class="card-text"><b>Age:</b> {{ b.yearPublished }}</p>
+            <p class="card-text"><b>Email:</b> {{ b.price }}</p>
+            <p class="card-text"><b>Phone:</b> {{ b.rating }}</p>
+        </div>
+    </div>
+</div>
+<div *ngIf="!hasResult && searched">
+    <p>Nenhum resultado encontrado! Por favor altere sua busca.</p>
+</div>
